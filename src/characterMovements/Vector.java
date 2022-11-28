@@ -15,6 +15,24 @@ public class Vector {
 	double i;
 	double j;
 	double k;
+	// constructor
+		public Vector(double x, double y, double z) {
+			this.i=x;
+			this.j=y;
+			this.k=z;
+		}
+		public Vector (Point from, Point to) {
+			this.i=to.x-from.x;
+			this.j=to.y-from.y;
+			this.k=to.z-from.z;
+		}
+		public Vector (Vector v) {
+			this.i=v.i;
+			this.j=v.j;
+			this.k=v.k;
+		}
+	
+		
 	public double length() {
 		return Math.sqrt(i*i + j*j+ k*k);
 	}
@@ -31,23 +49,6 @@ public class Vector {
 	}
 	public static Vector add(Vector a, Vector b) {
 		return new Vector(a.i+b.i, a.j+b.j, a.k+b.k);
-	}
-	
-	// constructor
-	public Vector(double x, double y, double z) {
-		this.i=x;
-		this.j=y;
-		this.k=z;
-	}
-	public Vector (Point from, Point to) {
-		this.i=to.x-from.x;
-		this.j=to.y-from.y;
-		this.k=to.z-from.z;
-	}
-	public Vector (Vector v) {
-		this.i=v.i;
-		this.j=v.j;
-		this.k=v.k;
 	}
 	
 }
