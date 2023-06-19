@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author nimal
- *
- */
-module gameMath {
-}
